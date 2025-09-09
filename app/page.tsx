@@ -6,6 +6,8 @@ import Education from "@/components/education"
 import Blog from "@/components/blog"
 import Contact from "@/components/contact"
 import type { Metadata } from "next"
+import { enableBlogSection, enableProjectsSection } from "@/lib/utils"
+import Skills from "@/components/skills"
 
 export const metadata: Metadata = {
   title: "Vivek Jadaun | Senior Software Engineer",
@@ -14,15 +16,18 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const showProjects = enableProjectsSection();
+  const showBlog = enableBlogSection();
   return (
     <div className="w-full">
       <Hero />
       <About />
       <Experience />
-      <Projects />
+      <Skills />
+      {showProjects && <Projects />}
       <Education />
-      <Blog />
+      {showBlog && <Blog />}
       <Contact />
     </div>
-  )
+  );
 }

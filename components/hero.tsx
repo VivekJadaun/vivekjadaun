@@ -1,10 +1,15 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowUpCircle, Download, Github, Linkedin, Mail } from "lucide-react"
+import { Download, Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
+import ScrollToTop from "./scroll-to-top";
+import contacts from "@/constants/contacts.json";
+import { getResumeLink } from "@/lib/utils";
 
 export default function Hero() {
+  const resumeLink = getResumeLink();
+
   return (
     <section
       id="home"
@@ -35,7 +40,9 @@ export default function Hero() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button asChild size="lg" className="rounded-full">
-              <Link href="#contact">Get In Touch</Link>
+              <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-4 w-4" /> Download Resume
+              </a>
             </Button>
             <Button
               asChild
@@ -43,19 +50,13 @@ export default function Hero() {
               size="lg"
               className="rounded-full"
             >
-              <a
-                href="https://resume.nihal.com.np/nihal_maskey.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download className="mr-2 h-4 w-4" /> Download Resume
-              </a>
+              <Link href="#contact">Get In Touch</Link>
             </Button>
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-4 mt-6 text-ring">
             <Button variant="ghost" size="icon" asChild>
               <Link
-                href="https://github.com/vivekjadaun"
+                href={contacts.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -65,7 +66,7 @@ export default function Hero() {
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link
-                href="https://linkedin.com/in/vivekjadaun"
+                href={contacts.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -74,24 +75,14 @@ export default function Hero() {
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="mailto:vivekjadaun08@gmail.com">
+              <Link href={`mailto:${contacts.email}`}>
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </Link>
             </Button>
           </div>
         </div>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden md:block js-only">
-          <Link
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
-            <ArrowUpCircle className="h-10 w-10 text-primary animate-bounce" />
-          </Link>
-        </div>
+        <ScrollToTop />
       </div>
     </section>
   );

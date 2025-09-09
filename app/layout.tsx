@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import "./globals.css";
 import { Analytics } from "@/components/analytics"
 import ClientLayout from "./client"
 import { Suspense } from "react"
