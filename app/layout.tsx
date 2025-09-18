@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nihalmaskey.com",
+    url: "https://vivekjadaun.vercel.app",
     title: "Vivek Jadaun | Senior Software Engineer",
     description:
       "Portfolio of Vivek Jadaun, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
@@ -45,20 +45,12 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Vivek Jadaun | Senior Software Engineer",
-    description:
-      "Portfolio of Vivek Jadaun, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
-    creator: "@maskeynihal",
-    images: ["/favicon.png"],
-  },
   robots: {
     index: true,
     follow: true,
   },
-    generator: 'v0.app'
-}
+  generator: "v0.app",
+};
 
 export default function RootLayout({
   children,
@@ -74,6 +66,3 @@ export default function RootLayout({
     </>
   )
 }
-
-
-import './globals.css'
