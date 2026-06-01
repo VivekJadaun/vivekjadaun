@@ -35,7 +35,7 @@ export default function Hero() {
           <div className="max-w-[700px] text-muted-foreground">
             <p className="text-lg">
               Building scalable, secure, and high performance full-stack web
-              applications with over 7 years of experience
+              applications with almost 8 years of experience
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
