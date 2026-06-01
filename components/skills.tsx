@@ -4,23 +4,67 @@ import { Badge } from "@/components/ui/badge"
 const skillCategories = [
   {
     category: "Frontend",
-    skills: ["JavaScript", "TypeScript", "React.js", "HTML/CSS", "Tailwind CSS"],
+    skills: [
+      "React",
+      "Redux",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "jQuery",
+      "HTML5",
+      "CSS3",
+    ],
   },
   {
     category: "Backend",
-    skills: ["Node.js", "PHP", "Laravel", "Express.js", "RESTful APIs"],
+    skills: [
+      "Laravel",
+      ".Net",
+      "Express",
+      "Node.js",
+      "Python",
+      "Apollo GraphQL",
+      "REST APIs",
+    ],
   },
   {
     category: "Database",
-    skills: ["MySQL", "PostgreSQL", "DynamoDB", "MongoDB", "Redis"],
+    skills: ["MySQL", "MongoDB", "Redis", "SQL Server"],
   },
   {
     category: "Cloud & DevOps",
-    skills: ["AWS", "GitHub Actions", "Travis-CI", "Docker", "CI/CD"],
+    skills: [
+      "AWS Amplify",
+      "AWS AppSync",
+      "AWS S3",
+      "AWS ECS",
+      "Azure Cloud",
+      "GitHub Actions",
+    ],
   },
   {
-    category: "Tools & Methodologies",
-    skills: ["Git", "Agile", "Scrum", "JIRA", "Figma"],
+    category: "Tools & Libraries",
+    skills: [
+      "ElectronJs",
+      "Cypress",
+      "RTL",
+      "Material UI",
+      "GTM",
+      "MS Power Apps",
+    ],
+  },
+  {
+    category: "Developer Tools",
+    skills: [
+      "Git",
+      "Docker",
+      "Lighthouse",
+      "Webpack",
+      "Babel",
+      "ESLint",
+      "Postman",
+      "Claude Code",
+    ],
   },
 ];
 

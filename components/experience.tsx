@@ -4,8 +4,18 @@ import { Badge } from "@/components/ui/badge"
 const experiences = [
   {
     title: "Senior Software Engineer",
+    company: "Everest Engineering",
+    period: "Jan 2026 - Present̉̉",
+    location: "Delhi, India (Remote)",
+    achievements: [
+      "Assisted with the codebase migration of an Australia based legacy senior care platform called Civica Carelink.", 
+      "Performed techstack upgrade from legacy to modern web development tools, architectural overhaul to reduce costs & database optimizations for improving UI/UX performance.",
+    ],
+  },
+  {
+    title: "Senior Software Engineer",
     company: "Techgrit Solutions Pvt. Ltd",
-    period: "Oct 2022 - Present",
+    period: "Oct 2022 - Jan 2026",
     location: "Delhi, India (Remote)",
     achievements: [
       "Leading front-end while actively contributing to the backend development for 360 Sync, a cloudbased service by EvolveMEP, streamlining cross-cloud file transfers and data synchronization.",
